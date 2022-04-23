@@ -1,14 +1,12 @@
 package com.aysimasavas.quizapplication.api;
 
-import com.aysimasavas.quizapplication.business.GeneratorService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.aysimasavas.quizapplication.business.GeneratorService;
 import com.aysimasavas.quizapplication.entities.MathResponse;
-
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/math")
@@ -22,24 +20,52 @@ public class MathController {
     @GetMapping("/add")
     public MathResponse generateAddition(@RequestParam(value = "min", required = false) Integer min,
                                          @RequestParam(value = "max", required = false) Integer max) {
-        if (min == null) min = defaultMin;
-        if (max == null) max = defaultMax;
+        if (min == null) {
+			min = defaultMin;
+		}
+        if (max == null) {
+			max = defaultMax;
+		}
         return service.generateAdd(max, min);
     }
 
     @GetMapping("/subs")
-    public MathResponse generateSub(@RequestParam("min") int min, @RequestParam("max") int max,
-                                    @RequestParam("negative") boolean isNegative) {
+	public MathResponse generateSub(@RequestParam(value = "min", required = false) Integer min,
+			@RequestParam(value = "max", required = false) Integer max,
+			@RequestParam(value = "negative", required = false) Boolean isNegative) {
+		if (min == null) {
+			min = defaultMin;
+		}
+		if (max == null) {
+			max = defaultMax;
+		}
+		if (isNegative == null) {
+			isNegative = false;
+		}
         return service.generateSub(max, min, isNegative);
     }
 
     @GetMapping("/multiply")
-    public MathResponse generateMultiplication(@RequestParam("min") int min, @RequestParam("max") int max) {
+	public MathResponse generateMultiplication(@RequestParam(value = "min", required = false) Integer min,
+			@RequestParam(value = "max", required = false) Integer max) {
+		if (min == null) {
+			min = defaultMin;
+		}
+		if (max == null) {
+			max = defaultMax;
+		}
         return service.generateMultiply(max, min);
     }
 
     @GetMapping("/div")
-    public MathResponse generateDivision(@RequestParam("min") int min, @RequestParam("max") int max) {
+	public MathResponse generateDivision(@RequestParam(value = "min", required = false) Integer min,
+			@RequestParam(value = "max", required = false) Integer max) {
+		if (min == null) {
+			min = defaultMin;
+		}
+		if (max == null) {
+			max = defaultMax;
+		}
         return service.generateDiv(max, min);
     }
 
