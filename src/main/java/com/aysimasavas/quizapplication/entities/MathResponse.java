@@ -1,74 +1,84 @@
 package com.aysimasavas.quizapplication.entities;
 
-import javax.persistence.Entity;
 
-@Entity
 public class MathResponse {
 
-	private int firstNum;
-	private int secondNum;
-	private boolean isNegative;
-	private String operation;
-	private String expression;
-	private float result;
+    private int firstNum;
+    private int secondNum;
+    private boolean isNegative;
+    private String operation;
+    private String expression;
+    private float result;
 
-	public MathResponse(int firstNum, int secondNum, boolean isNegative, String operation, String expression,
-			float result) {
-		super();
-		this.firstNum = firstNum;
-		this.secondNum = secondNum;
-		this.isNegative = isNegative;
-		this.operation = operation;
-		this.expression = expression;
-		this.result = result;
-	}
+    public MathResponse(int firstNum, int secondNum, boolean isNegative, String operation, String expression,
+                        float result) {
+        super();
+        this.firstNum = firstNum;
+        this.secondNum = secondNum;
+        this.isNegative = isNegative;
+        this.operation = operation;
+        this.expression = expression;
+        this.result = result;
+    }
 
-	public int getFirstNum() {
-		return firstNum;
-	}
+    public MathResponse() {
 
-	public void setFirstNum(int firstNum) {
-		this.firstNum = firstNum;
-	}
+    }
 
-	public int getSecondNum() {
-		return secondNum;
-	}
+    public MathResponse(int firstNum, int secondNum, String operation, String expression, int result) {
+        this.firstNum = firstNum;
+        this.secondNum = secondNum;
+        this.operation = operation;
+        this.expression = expression;
+        this.result = (float) result;
+    }
 
-	public void setSecondNum(int secondNum) {
-		this.secondNum = secondNum;
-	}
+    public int getFirstNum() {
+        return firstNum;
+    }
 
-	public boolean isNegative() {
-		return isNegative;
-	}
+    public void setFirstNum(int firstNum) {
+        this.firstNum = firstNum;
+    }
 
-	public void setNegative(boolean isNegative) {
-		this.isNegative = isNegative;
-	}
+    public int getSecondNum() {
+        return secondNum;
+    }
 
-	public String getOperation() {
-		return operation;
-	}
+    public void setSecondNum(int secondNum) {
+        this.secondNum = secondNum;
+    }
 
-	public void setOperation(String operation) {
-		this.operation = operation;
-	}
+    public boolean isNegative() {
+        return isNegative;
+    }
 
-	public String getExpression() {
-		return expression;
-	}
+    public void setNegative(boolean isNegative) {
+        this.isNegative = isNegative;
+    }
 
-	public void setExpression(String expression) {
-		this.expression = expression;
-	}
+    public String getOperation() {
+        return operation;
+    }
 
-	public float getResult() {
-		return result;
-	}
+    public void setOperation(String operation) {
+        this.operation = operation;
+    }
 
-	public void setResult(float result) {
-		this.result = result;
-	}
+    public String getExpression() {
+        return expression;
+    }
+
+    public void setExpression(String expression) {
+        this.expression = expression;
+    }
+
+    public float getResult() {
+        return result;
+    }
+
+    public void setResult(float result) {
+        this.result = result;
+    }
 
 }
