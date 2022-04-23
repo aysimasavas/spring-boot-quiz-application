@@ -8,7 +8,7 @@ public class MathResponse {
     private boolean isNegative;
     private String operation;
     private String expression;
-    private float result;
+	private double result;
 
     public MathResponse(int firstNum, int secondNum, boolean isNegative, String operation, String expression,
                         float result) {
@@ -30,8 +30,16 @@ public class MathResponse {
         this.secondNum = secondNum;
         this.operation = operation;
         this.expression = expression;
-        this.result = (float) result;
+        this.result = result;
     }
+
+	public MathResponse(int firstNum, int secondNum, String operation, String expression, double result) {
+		this.firstNum = firstNum;
+		this.secondNum = secondNum;
+		this.operation = operation;
+		this.expression = expression;
+		this.result = result;
+	}
 
     public int getFirstNum() {
         return firstNum;
@@ -73,12 +81,13 @@ public class MathResponse {
         this.expression = expression;
     }
 
-    public float getResult() {
-        return result;
-    }
+	public double getResult() {
+		return result;
+	}
 
-    public void setResult(float result) {
-        this.result = result;
-    }
+	public void setResult(double result) {
+		this.result = result;
+	}
+
 
 }
