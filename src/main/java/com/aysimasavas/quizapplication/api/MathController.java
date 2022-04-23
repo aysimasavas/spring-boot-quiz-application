@@ -45,6 +45,8 @@ public class MathController {
         return service.generateSub(max, min, isNegative);
     }
 
+	// http://localhost:8070/api/math/multiply?max=9999
+
     @GetMapping("/multiply")
 	public MathResponse generateMultiplication(@RequestParam(value = "min", required = false) Integer min,
 			@RequestParam(value = "max", required = false) Integer max) {

@@ -47,7 +47,7 @@ public class GeneratorService implements IGeneratorService {
 		int first = GeneratorUtils.generateRandomNumber(max, min);
 		int second = GeneratorUtils.generateRandomNumber(max, min);
 		String operation = "/";
-		double result = first / second;
+		double result = (double) first / second;
 		String expression = String.format("%d %s %d", first, operation, second);
 		return new MathResponse(first, second, operation, expression, result);
     }
