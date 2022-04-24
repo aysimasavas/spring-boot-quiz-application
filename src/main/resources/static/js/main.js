@@ -34,7 +34,7 @@ function click() {
 
 generateButton.onclick = click;
 
-const BASE_API_URL = "http://localhost:8070/api/math";
+const BASE_API_URL = "https://agenerator.herokuapp.com/api/math";
 
 const fetchAdd = (min, max) => {
     var url = BASE_API_URL + "/add";
