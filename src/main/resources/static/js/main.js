@@ -3,7 +3,6 @@ var min = document.getElementById('min');
 var max = document.getElementById('max');
 var selectedRadio = document.getElementsByName('op');
 var result = document.getElementById('question');
-var pre = document.getElementById('json');
 
 function click() {
     var minValue = min.value;
@@ -33,7 +32,6 @@ function click() {
     }
 }
 
-// generateButton on click
 generateButton.onclick = click;
 
 const BASE_API_URL = "http://localhost:8070/api/math";
