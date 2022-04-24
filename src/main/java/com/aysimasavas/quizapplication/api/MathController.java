@@ -1,13 +1,11 @@
 package com.aysimasavas.quizapplication.api;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.aysimasavas.quizapplication.business.GeneratorService;
 import com.aysimasavas.quizapplication.entities.MathResponse;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/math")
 public class MathController {
